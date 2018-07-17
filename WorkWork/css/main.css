@@ -8599,6 +8599,7 @@ body {
     box-shadow: 0 0 0px rgba(0, 0, 0, 0.3); } }
 
 .purple {
+<<<<<<< HEAD
   background-image: url("../img/purple-bg.png"); }
 =======
   background-image: url("/img/purple-bg.png"); }
