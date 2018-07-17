@@ -8599,11 +8599,7 @@ body {
     box-shadow: 0 0 0px rgba(0, 0, 0, 0.3); } }
 
 .purple {
-<<<<<<< HEAD
   background-image: url("../img/purple-bg.png"); }
-=======
-  background-image: url("/img/purple-bg.png"); }
->>>>>>> bd9234cb1e2a6ed1d6c5f68a5d591900d425612e
 
 .header_purple {
   border-bottom: 2px solid #cfb8a6; }
