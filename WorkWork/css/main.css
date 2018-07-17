@@ -8599,7 +8599,7 @@ body {
     box-shadow: 0 0 0px rgba(0, 0, 0, 0.3); } }
 
 .purple {
-  background-image: url("/app/img/purple-bg.png"); }
+  background-image: url("/img/purple-bg.png"); }
 
 .header_purple {
   border-bottom: 2px solid #cfb8a6; }
