@@ -1,0 +1,90 @@
+@media screen and (min-width: 1340px)
+	.header__buttonUp
+		background: #fff
+		color: #353541
+@media screen and (max-width: 1224px)
+	.container
+		width: 100%
+
+@media screen and (max-width: 1120px)
+	.about-me, .experience, .education, .skills, .contacts
+		padding-left: 20px
+		padding-right: 20px
+
+@media screen and (max-width: 924px)
+	.header
+		background-size: auto 100%
+		background-position: -100px 0 
+	.experience
+		&__workplace
+			margin-bottom: 80px
+			&-left-side, &-right-side
+				margin-bottom: 80px
+				width: 100%
+			&::after
+				display: none
+			&-holder, 
+				flex-direction: column
+				align-items: center
+			&-left-side::after
+				display: none
+
+@media screen and (max-width: 752px)
+	.header
+		background-position: -200px 0 
+		&__title
+			font-size: 42px
+	.about-me
+		flex-direction: column
+		&__photo
+			order: 1
+			margin: 0 auto 40px
+		&__main-info
+			order: 2
+	
+	.skills
+		&__sliders-holder
+			flex-direction: column
+		&__left-side, &__right-side
+			width: 100%
+		&__slider-box input
+			width: 80%
+
+	.contacts
+		flex-direction: column
+		&__message-block
+			margin-bottom: 40px
+			&::after
+				display: none
+	.message-block
+		&__button
+			left: 0
+
+@media screen and (max-width: 524px)
+	.header
+		background-position: -350px 0 
+		&__text
+			width: 100%
+	.about-me
+		&__main-info
+			width: 100%
+
+@media screen and (max-width: 370px)
+	.header
+		background-position: -400px 0
+		&__mmenu-button_active
+			left: 0
+		&__title
+			font-size: 32px
+	.about-me
+		&__photo
+			width: 96%
+			height: 300px
+	.experience
+		&__workplace
+			width: 100%
+	.skills__slider-box input + span
+		bottom: 46px
+		right: 80px
+	.adress-block__element p
+		width: 200px

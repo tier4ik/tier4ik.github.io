@@ -1,0 +1,484 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600,700");
+@import url(../libs/Material Design/material.min.css);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Raleway, sans-serif; }
+
+body {
+  background: #353541; }
+
+.container {
+  width: 1225px;
+  margin: auto;
+  overflow: hidden; }
+
+.header {
+  background: url("../img/bg.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  padding-top: 110px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative; }
+  .header__buttonUp {
+    width: 50px;
+    height: 60px;
+    color: #fff;
+    background: #353541;
+    line-height: 60px;
+    font-weight: bold;
+    border-radius: 4px;
+    opacity: .8;
+    position: fixed;
+    top: 90%;
+    right: 2%;
+    transition: all .4s ease;
+    z-index: 300;
+    display: none;
+    cursor: pointer; }
+    .header__buttonUp span {
+      display: inline-block;
+      position: relative;
+      bottom: 2px; }
+  .header__title {
+    font-weight: 600;
+    font-size: 48px;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #fff; }
+  .header__text {
+    display: inline-block;
+    width: 550px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.8em;
+    margin-bottom: 50px;
+    color: #fff; }
+  .header__button, .message-block__button {
+    display: inline-block;
+    width: 170px;
+    height: 50px;
+    border-radius: 4px;
+    text-align: center;
+    line-height: 50px;
+    background: #fb6470;
+    font-size: 22px;
+    text-decoration: none;
+    margin-bottom: 115px;
+    color: #fff;
+    transition: all ease .5s; }
+    .header__button:hover, .message-block__button:hover {
+      box-shadow: 0 0 6px 10px rgba(255, 255, 255, 0.3); }
+  .header__nav {
+    width: 275px;
+    position: absolute;
+    top: 0;
+    left: -275px;
+    z-index: 100;
+    transition: all ease .5s; }
+    .header__nav_active {
+      left: 0; }
+  .header__menu {
+    list-style: none;
+    background: rgba(53, 53, 65, 0.96); }
+  .header__element:first-child .header__link {
+    padding: 0;
+    border-bottom: 0; }
+  .header__element:first-child:hover .header__link {
+    padding-left: 0; }
+  .header__element:hover .header__link {
+    padding-left: 40px; }
+  .header__link {
+    color: #fff;
+    position: relative;
+    text-decoration: none;
+    font-size: 22px;
+    padding: 18px;
+    display: block;
+    text-align: left;
+    border-bottom: 1px solid #282835;
+    transition: padding-left linear .4s; }
+    .header__link p {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: 0 auto;
+      padding-bottom: 20px;
+      font-size: 16px;
+      text-align: left;
+      padding-left: 20px; }
+      .header__link p span {
+        display: block;
+        font-size: 32px; }
+  .header__mmenu-button {
+    cursor: pointer;
+    position: absolute;
+    height: 22px;
+    top: 30px;
+    left: 30px;
+    z-index: 200;
+    transition: all ease 1s; }
+    .header__mmenu-button span {
+      display: block;
+      height: 2px;
+      width: 30px;
+      background: #fb6470;
+      transition: all ease 1s; }
+      .header__mmenu-button span::before, .header__mmenu-button span::after {
+        content: '';
+        display: block;
+        height: 2px;
+        width: 30px;
+        background: #fb6470;
+        position: absolute;
+        top: 10px; }
+      .header__mmenu-button span::after {
+        top: 20px; }
+    .header__mmenu-button_active {
+      left: 300px;
+      overflow: hidden; }
+      .header__mmenu-button_active span {
+        transform: translateX(30px); }
+        .header__mmenu-button_active span::before {
+          content: 'x';
+          display: block;
+          height: 0;
+          font-size: 32px;
+          color: #fb6470;
+          top: -10px;
+          transform: translateX(-30px); }
+
+.about-me {
+  padding: 80px 95px 0 115px;
+  display: flex;
+  justify-content: space-between;
+  background: #fff;
+  position: relative; }
+  .about-me::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: 1px;
+    width: 84%;
+    background: #e5e5e5; }
+  .about-me__main-info {
+    width: 360px; }
+  .about-me__photo {
+    width: 320px;
+    height: 460px;
+    background: #353541; }
+
+.main-info__title, .experience__title, .education__title, .skills__title {
+  font-size: 32px;
+  margin-bottom: 55px;
+  position: relative;
+  color: #3e3e3e; }
+  .main-info__title::after, .experience__title::after, .education__title::after, .skills__title::after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    height: 2px;
+    width: 75px;
+    background: #fb6470; }
+
+.main-info__text {
+  font-size: 14px;
+  line-height: 1.8em;
+  margin-bottom: 35px;
+  color: #656565; }
+
+.main-info__menu {
+  list-style: none;
+  margin-bottom: 85px; }
+
+.main-info__element {
+  height: 50px;
+  border-bottom: 1px solid silver;
+  line-height: 50px;
+  color: #3e3e3e; }
+  .main-info__element span {
+    font-weight: bold;
+    padding-right: 15px; }
+
+.experience, .education, .skills, .contacts {
+  background: #fff;
+  padding: 80px 95px 0 115px;
+  position: relative; }
+  .experience__workplace-holder, .education__institution-holder {
+    display: flex; }
+  .experience__workplace-left-side, .education__institution-left-side, .experience__workplace-right-side, .education__institution-right-side {
+    width: 49%;
+    position: relative; }
+  .experience__workplace-left-side::after, .education__institution-left-side::after {
+    content: '';
+    background: url("../img/Midlle.png");
+    display: inline-block;
+    width: 32px;
+    height: 460px;
+    position: absolute;
+    top: 0;
+    right: -15px;
+    z-index: 10; }
+  .experience__workplace, .education__institution {
+    width: 315px;
+    height: auto;
+    margin: 0 auto 140px;
+    background: #353541;
+    border-radius: 8px;
+    padding: 18px;
+    position: relative; }
+    .experience__workplace-position, .education__institution-class {
+      color: #fff;
+      margin-bottom: 6px;
+      font-size: 16px; }
+    .experience__workplace-organisation, .education__institution-school {
+      color: #d7d7d9;
+      font-weight: 400;
+      margin-left: 15px;
+      font-size: 15px; }
+    .experience__workplace-period, .education__institution-period {
+      color: #fb6470;
+      margin-bottom: 8px;
+      display: inline-block; }
+    .experience__workplace-description, .education__institution-description {
+      color: #fff;
+      font-size: 14px;
+      line-height: 1.4em; }
+    .experience__workplace::after, .education__institution::after {
+      content: '';
+      display: inline-block;
+      position: absolute;
+      right: 100%;
+      top: 20px;
+      border-top: 30px solid #353541;
+      border-left: 30px solid transparent; }
+    .experience__workplace_left-side, .education__institution_left-side {
+      position: relative;
+      top: 80px; }
+      .experience__workplace_left-side::after, .education__institution_left-side::after {
+        content: '';
+        display: inline-block;
+        position: absolute;
+        left: 100%;
+        top: 60px;
+        border-top: 0;
+        border-right: 30px solid transparent;
+        border-left: 0;
+        border-bottom: 30px solid #353541; }
+  .experience::after, .education::after, .skills::after, .contacts::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: 1px;
+    width: 84%;
+    background: #e5e5e5; }
+
+.skills {
+  padding-bottom: 30px;
+  background: #1d1d24; }
+  .skills::after {
+    display: none; }
+  .skills__title {
+    color: #fff; }
+  .skills__skill-name {
+    display: block;
+    font-size: 18px;
+    color: #fff;
+    margin-bottom: 20px; }
+  .skills__slider-box input {
+    width: 270px;
+    margin-bottom: 30px; }
+    .skills__slider-box input + span {
+      color: #fff;
+      font-size: 16px;
+      margin-left: 20px;
+      position: relative;
+      bottom: 5px; }
+  .skills__sliders-holder {
+    display: flex;
+    justify-content: space-between; }
+  .skills__left-side, .skills__right-side {
+    width: 50%; }
+
+.contacts {
+  padding-bottom: 80px;
+  display: flex; }
+  .contacts__message-block {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative; }
+    .contacts__message-block::after {
+      content: '';
+      display: inline-block;
+      width: 1px;
+      height: 90%;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 80%;
+      margin: auto 0;
+      background: silver; }
+
+.message-block__title {
+  font-size: 22px;
+  color: #3e3e3e;
+  margin-bottom: 25px; }
+
+.message-block__name, .message-block__email, .message-block__textarea {
+  display: block;
+  margin-bottom: 24px;
+  width: 265px;
+  height: 35px;
+  padding: 10px;
+  border: 1px solid #353541; }
+
+.message-block__textarea {
+  resize: none;
+  height: 95px; }
+
+.message-block__button {
+  width: 95px;
+  height: 35px;
+  border-radius: 0;
+  font-size: 16px;
+  line-height: 35px;
+  margin-bottom: 0;
+  position: relative;
+  left: 170px; }
+  .message-block__button:hover {
+    box-shadow: 0 0 6px 4px rgba(0, 0, 0, 0.3); }
+
+.adress-block__menu {
+  list-style: none; }
+
+.adress-block__element {
+  margin-bottom: 30px; }
+  .adress-block__element img {
+    margin-right: 45px;
+    position: relative;
+    top: 22px; }
+  .adress-block__element span {
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 600;
+    color: #3e3e3e;
+    margin-bottom: 15px; }
+  .adress-block__element p {
+    position: relative;
+    left: 80px;
+    color: #656565; }
+
+.footer {
+  background: #fff;
+  padding: 40px 0 25px;
+  text-align: center; }
+  .footer__menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px; }
+  .footer__element {
+    padding: 0 6px;
+    border-right: 1px solid silver; }
+    .footer__element:last-child {
+      border-right: 0; }
+  .footer__copyright {
+    font-size: 12px; }
+
+@media screen and (min-width: 1340px) {
+  .header__buttonUp {
+    background: #fff;
+    color: #353541; } }
+
+@media screen and (max-width: 1224px) {
+  .container {
+    width: 100%; } }
+
+@media screen and (max-width: 1120px) {
+  .about-me, .experience, .education, .skills, .contacts, .education, .skills, .skills, .contacts {
+    padding-left: 20px;
+    padding-right: 20px; } }
+
+@media screen and (max-width: 924px) {
+  .header {
+    background-size: auto 100%;
+    background-position: -100px 0; }
+  .experience__workplace, .education__institution {
+    margin-bottom: 80px; }
+    .experience__workplace-left-side, .education__institution-left-side, .experience__workplace-right-side, .education__institution-right-side {
+      margin-bottom: 80px;
+      width: 100%; }
+    .experience__workplace::after, .education__institution::after {
+      display: none; }
+    .experience__workplace-holder, .education__institution-holder {
+      flex-direction: column;
+      align-items: center; }
+    .experience__workplace-left-side::after, .education__institution-left-side::after {
+      display: none; } }
+
+@media screen and (max-width: 752px) {
+  .header {
+    background-position: -200px 0; }
+    .header__title {
+      font-size: 42px; }
+  .about-me {
+    flex-direction: column; }
+    .about-me__photo {
+      order: 1;
+      margin: 0 auto 40px; }
+    .about-me__main-info {
+      order: 2; }
+  .skills__sliders-holder {
+    flex-direction: column; }
+  .skills__left-side, .skills__right-side {
+    width: 100%; }
+  .skills__slider-box input {
+    width: 80%; }
+  .contacts {
+    flex-direction: column; }
+    .contacts__message-block {
+      margin-bottom: 40px; }
+      .contacts__message-block::after {
+        display: none; }
+  .message-block__button {
+    left: 0; } }
+
+@media screen and (max-width: 524px) {
+  .header {
+    background-position: -350px 0; }
+    .header__text {
+      width: 100%; }
+  .about-me__main-info {
+    width: 100%; } }
+
+@media screen and (max-width: 370px) {
+  .header {
+    background-position: -400px 0; }
+    .header__mmenu-button_active {
+      left: 0; }
+    .header__title {
+      font-size: 32px; }
+  .about-me__photo {
+    width: 96%;
+    height: 300px; }
+  .experience__workplace, .education__institution {
+    width: 100%; }
+  .skills__slider-box input + span {
+    bottom: 46px;
+    right: 80px; }
+  .adress-block__element p {
+    width: 200px; } }
