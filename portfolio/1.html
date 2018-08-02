@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>my-slider</title>
+  <link type="text/css" rel="stylesheet" href="user.css">
+</head>
+<body>
+  <div class="container">
+    <h1 class="title">My Works<a href="https://github.com/tier4ik/tier4ik.github.io" target="_blank">http://GitHub</a></h1>
+    <h2 class="click">Click to Go<br></h2>
+    <div class="slider-rails"> 
+      <div class="slider-wagon">
+        <div class="slider-element active"><a href="#"><img src="my-slider/bookshop.jpg"></a></div>
+        <div class="slider-element"><a href="http://tier4ik.github.io/WorkWork" target="_blank"><img src="my-slider/workwork-template.jpg"></a></div>
+        <div class="slider-element"><a href="http://tier4ik.github.io/resume" target="_blank"><img src="my-slider/Resume_Home.jpg"></a></div>
+        <div class="slider-element"><a href="#"><img src="my-slider/beauty-salon.jpg"></a></div>
+        <div class="slider-element"><a href="#"><img src="my-slider/photo-collection.jpg"></a></div>
+        <div class="slider-element"><a href="#"><img src="my-slider/blackandwhite.jpg"></a></div>
+        <div class="slider-element"><a href="#"><img src="my-slider/design.jpg"></a></div>
+        <div class="slider-element"><a href="#"><img src="my-slider/agency.jpg"></a></div>
+        <div class="slider-element"><a href="#"><img src="my-slider/pricing.jpg"></a></div>
+        <div class="slider-element"><a href="#"><img src="my-slider/tinyone.jpg"></a></div>
+        <div class="slider-element"><a href="#"><img src="my-slider/indastrix.jpg"></a></div>
+      </div>
+    </div>
+  </div>
+  <script src="my-slider.js"></script>
+  <script>
+    let slider = new MySlider(document.querySelector('.container')); 
+    slider.init();
+
+    var head = document.querySelector('head'), 
+        link = document.createElement('link');
+
+    link.type = 'text/css';
+    link.rel = 'stylesheet';
+    link.href = 'my-slider.css';
+    head.appendChild(link);
+  </script>
+</body>
+</html>

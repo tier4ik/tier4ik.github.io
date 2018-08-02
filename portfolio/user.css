@@ -1,0 +1,109 @@
+.title {
+	font-size: 100px;
+	font-weight: bold;
+	color: rgba(256, 256, 256, .6);
+	position: absolute;
+	top: 90px;
+	left: 80px;
+	width: 350px;
+}
+.title::before, .title::after {
+	content: '';
+	height: 10px;
+	width: 90%;
+	background: rgba(256, 256, 256, .6);
+	position: absolute;
+	left: 0;
+	bottom: -40px;
+	transform: skewX(20deg);
+}
+.title::after {
+	width: 70%;
+	bottom: -80px;
+}
+.title > a {
+	font-size: 26px;
+	text-decoration: none;
+	color: rgb(256, 256, 256);
+	position: absolute;
+	left: 0;
+	bottom: -20px;
+	animation: spark 2s linear infinite;
+}
+.click {
+	font-size: 80px;
+	font-weight: bold;
+	color: rgba(256, 256, 256, .6);
+	position: absolute;
+	top: 100px;
+	width: 350px;
+	right: 80px;
+}
+.click::after {
+	content: '\21A9';
+}
+@keyframes spark {
+	0% {opacity: .6}
+	15% {opacity: .8}
+	30% {opacity: .6}
+	45% {opacity: .4}
+	60% {opacity: .2}
+	75% {opacity: .4}
+	90% {opacity: .6}
+	100% {opacity: .6}
+}
+@media screen and (max-width: 1680px) {
+	.title {
+		font-size: 60px;
+	}
+	.click {
+		width: 100px;
+		font-size: 50px;
+	}
+}
+@media screen and (max-width: 1620px) {
+	.title {
+		transform: scale(.7);
+		left: 20px;
+	}
+}
+@media screen and (max-width: 1420px) {
+	.title {
+		width: 100px;
+	}
+	.title > a {
+		bottom: -140px;
+	}
+}
+@media screen and (max-width: 1178px) {
+	.title {
+		width: 100px;
+	}
+	.click {
+		display: none;
+	}
+}
+@media screen and (max-width: 992px) {
+	.title {
+		width: 700px;
+		left: 0;
+		right: 0;
+		margin: auto;
+		top: auto;
+		bottom: 250px;
+	}
+	.title::after, .title::before {
+		display: none;
+	}
+	.title > a {
+		position: static;
+		padding-left: 20px;
+	}
+}
+@media screen and (max-width: 700px) {
+	.title {
+		font-size: 40px;
+		width: auto;
+		bottom: 260px;
+	}
+}
