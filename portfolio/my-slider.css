@@ -137,7 +137,10 @@
 @media screen and (max-width: 700px) {
 	.slider-main {
 		bottom: auto;
-		top: 80px;
+		top: 10px;
+	}
+	.slider-rails {
+		height: 200px;
 	}
 }
 @media screen and (max-width: 480px) {
