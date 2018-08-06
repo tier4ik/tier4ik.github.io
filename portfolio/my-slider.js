@@ -13,8 +13,8 @@ class MySlider {
 		this.wagon.addEventListener('click', self._elementPicker);
 		this.wagon.addEventListener('mousedown', self._wagonCatcher);
 		this.rails.addEventListener('wheel', self._wagonWheelMover);
-		this.rails.addEventListener('touchstart', self._wagonTouchStart);
-		document.addEventListener('touchmove', self._wagonTouchMove);
+		this.wagon.addEventListener('touchstart', self._wagonTouchStart);
+		this.wagon.addEventListener('touchmove', self._wagonTouchMove);
 	}
 	_mainCreator() { //Создаем блок для главного изображения
 		this.mainDiv = document.createElement('div');
