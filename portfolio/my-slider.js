@@ -5,12 +5,16 @@ class MySlider {
 		this.container = container;
 		this.mainDiv;
 		self = this;
+		this.startx = 0;
+		this.endx = 0;
 		this.wagon = this.container.getElementsByClassName('slider-wagon')[0];
 		this.rails = this.container.getElementsByClassName('slider-rails')[0];
 		this.wagonElements = this.wagon.getElementsByClassName('slider-element');
 		this.wagon.addEventListener('click', self._elementPicker);
 		this.wagon.addEventListener('mousedown', self._wagonCatcher);
 		this.rails.addEventListener('wheel', self._wagonWheelMover);
+		this.rails.addEventListener('touchstart', self._wagonTouchStart);
+		document.addEventListener('touchmove', self._wagonTouchMove);
 	}
 	_mainCreator() { //Создаем блок для главного изображения
 		this.mainDiv = document.createElement('div');
@@ -82,6 +86,25 @@ class MySlider {
 			if (self.wagon.getBoundingClientRect().left >= self.rails.getBoundingClientRect().left) left = -300;
 			self.wagon.style.left =  left + 300 + 'px';
 		}
+	}
+	_wagonTouchStart(e) { //Отслеживается нажатие пальцем
+		e.preventDefault();
+		let touchobj = e.changedTouches[0];
+        self.startx = touchobj.clientX;
+	}
+	_wagonTouchMove(e) {
+		let touchobj = e.changedTouches[0],
+        	dist = touchobj.clientX - self.startx,
+        	startPos = self.wagon.getBoundingClientRect().left - self.rails.getBoundingClientRect().left;
+        if(self.wagon.getBoundingClientRect().left >= self.rails.getBoundingClientRect().left + 10) {
+        	startPos = 0;
+        	dist = 0;
+        }
+        if(self.wagon.getBoundingClientRect().right <= self.rails.getBoundingClientRect().right - 10) {
+        	startPos = -(self.wagon.offsetWidth - self.rails.offsetWidth);
+        	dist = 0;
+        }
+        self.wagon.style.left = startPos + dist + 'px';
 	}
 	_navGenerator() {
 		let forward = document.createElement('div'),
