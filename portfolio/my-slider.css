@@ -29,6 +29,8 @@
 }
 .slider-wagon a {
 	text-decoration: none;
+	width: 100%;
+	height: 100%;
 }
 .slider-element {
 	display: inline-block;
@@ -40,6 +42,7 @@
 	margin-right: 6px;
 	border-radius: 8px;
 	opacity: .8;
+	background: rgba(256, 256, 256, .5);
 }
 .slider-element img {
 	width: auto;
