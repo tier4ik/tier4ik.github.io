@@ -88,7 +88,6 @@ class MySlider {
 		}
 	}
 	_wagonTouchStart(e) { //Отслеживается нажатие пальцем
-		e.preventDefault();
 		let touchobj = e.changedTouches[0];
         self.startx = touchobj.clientX;
 	}
