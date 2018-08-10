@@ -92,7 +92,8 @@
   },
   "license": "MIT",
   "dependencies": {
-    "hoek": "^5.0.3"
+    "hoek": "^5.0.3",
+    "string": "^3.3.3"
   },
   "peerDependencies": {
     "jquery": "1.9.1 - 3",
