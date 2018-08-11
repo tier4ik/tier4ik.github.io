@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width initial-scale=1.0">
+	<title>BlackAndWhite</title>
+	<link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="slider/bxslider-4-4.2.12/src/css/jquery.bxslider.css">
+	<script src="jquery-3.3.1.min.js"></script>
+	<script src="slider/bxslider-4-4.2.12/dist/jquery.bxslider.min.js"></script>
+	<script>
+	  $(document).ready(function(){
+	    $('.slider').bxSlider({
+	    	auto: true,
+	    });
+	    $('body').click(function(e){
+			  if(e.target.closest('.mobile-menu')) {
+			  	$('.navigation').css('display', 'block');
+			  	return;
+			  }
+			  if(!e.target.closest('.navigation')) {
+			  	$('.navigation').css('display', '');
+			  }
+		 	});
+	  });
+	</script>
+</head>
+<body id="body">
+	<div class="wrapper">
+		<header class="header">
+			<span class="header__title">Black</span>
+			<span class="header__title">And</span>
+			<span class="header__title">White</span>
+			<form class="header__form" action="http://ya.ru/yandsearch" target="new_blank">
+				<input class="header__textarea" type="text" name="text">
+				<input class="header__button" type="submit" name="button" value="Search">
+			</form>
+			<p class="header__subtitle">Lorem ipsum dolor sit amet</p>
+		</header>
+		<section class="galery slider">
+			<div class="galery__slider-holder">
+				<img src="img/photo.png" alt="city">
+				<div class="galery__description-holder">
+					<p class="galery__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+						sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+					</p>
+				</div>
+			</div>
+			<div class="galery__slider-holder">
+				<img src="img/photo.png" alt="city">
+				<div class="galery__description-holder">
+					<p class="galery__description galery__description-second">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+						sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+						sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+					</p>
+				</div>
+			</div>
+			<div class="galery__slider-holder">
+				<img src="img/photo.png" alt="city">
+				<div class="galery__description-holder">
+					<p class="galery__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+						sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+					</p>
+				</div>
+			</div>
+		</section>
+		<section class="we-do">
+			<div class="mobile-menu-holder">
+				<div class="mobile-menu">&#9776;</div>
+				<nav class="navigation">
+					<ul class="navigation__menu">
+						<li class="navigation__element"><a href="#" class="navigation__link">Home</a>
+						<li class="navigation__element"><a href="#" class="navigation__link">About</a>
+						<li class="navigation__element"><a href="#" class="navigation__link">Work</a>
+						<li class="navigation__element"><a href="#" class="navigation__link">Blog</a>
+						<li class="navigation__element"><a href="#" class="navigation__link">Contact</a>
+					</ul>
+				</nav>
+			</div>
+			<div class="items-holder">
+				<h2 class="items-holder__title">What we do</h2>
+				<p class="items-holder__text">Lorem ipsum dolor sit amet, <a href="#">consectetur adipisicing elit</a>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. <span>Excepteur sint occaecat</span> cupidatat non proident, sunt in culpa qui officia deserunt </p>
+				<p class="items-holder__subline">— Duis aute irure dolor in reprehenderit in voluptate velit ess</p>
+				<div class="items-holder__img-container">
+					<h2 class="items-holder__title-second">Images</h2>
+					<div class="items-holder__image"><img src="img/img1.png" alt="img1"></div>
+					<div class="items-holder__image"><img src="img/img2.png" alt="img2"></div>
+					<div class="items-holder__image"><img src="img/img3.png" alt="img3"></div>
+					<div class="items-holder__image"><img src="img/img4.png" alt="img4"></div>
+				</div>
+				<div class="items-holder__list-holder">
+					<h2 class="items-holder__title-third">Lists And Descriptions</h2>
+					<ul class="items-holder__first-list">
+						<li>Sed ut perspiciatis unde omnis iste natus</li>
+						<li>Lorem ipsum dolor sit amet, consectetur</li>
+						<li>At vero eos et accusamus et iusto odio</li>
+						<li>Et harum quidem rerum facilis est</li>
+					</ul>
+					<ol class="items-holder__second-list">
+						<li>Sed ut perspiciatis unde omnis iste natus</li>
+						<li>Lorem ipsum dolor sit amet, consectetur</li>
+						<li>At vero eos et accusamus et iusto odio</li>
+						<li>Et harum quidem rerum facilis est</li>
+					</ol>
+					<div class="items-holder__third-list">
+					<span>Sed ut perspiciatis unde omnis iste natus</span>
+					<span>Lorem ipsum dolor sit amet, consectetur</span>
+					<span>At vero eos et accusamus et iusto odio</span>
+					<span>Et harum quidem rerum facilis est</span></div>
+				</div>
+				<div class="items-holder__table-holder">
+					<h2 class="items-holder__table-title">Table</h2>
+					<table class="items-holder__table">
+						<tr>
+							<th>Lorem</th>
+							<th>Sed ut perspiciatis unde</th>
+							<th>Sed ut perspiciatis unde</th>
+							<th>Sed ut perspiciatis unde</th>
+						</tr>
+						<tr>
+							<td>At vero eos et</td>
+							<td>At vero eos et</td>
+							<td>At vero eos et</td>
+							<td>At vero eos et</td>
+						</tr>
+						<tr>
+							<td>At vero eos et</td>
+							<td>At vero eos et</td>
+							<td>At vero eos et</td>
+							<td>At vero eos et</td>
+						</tr>
+						<tr>
+							<td>At vero eos et</td>
+							<td>At vero eos et</td>
+							<td>At vero eos et</td>
+							<td>At vero eos et</td>
+						</tr>
+						<tr>
+							<td>At vero eos et</td>
+							<td>At vero eos et</td>
+							<td>At vero eos et</td>
+							<td>At vero eos et</td>
+						</tr>
+					</table>
+				</div>
+				<div class="items-holder__form-holder">
+					<h2 class="items-holder__form-title">Forms</h2>
+					<form>
+					<span class="items-holder__form-subtitle">Text:</span>
+					<input class="items-holder__form-textinput" type="text" placeholder="Input type text">
+					<span class="items-holder__form-subtitle">Select:</span>
+					<select class="items-holder__form-select" name="options" id="options">
+						<option value="1">Option1</option>
+						<option value="2">Option2</option>
+						<option value="3">Option3</option>
+						<option value="4">Option4</option>
+					</select>
+					<p class="items-holder__form-checkbox"><input  type="checkbox" name="Sed ut perspiciatis unde omnis iste natus" value="var-1">&nbsp;Sed ut perspiciatis unde omnis iste natus</p>
+					<p class="items-holder__form-checkbox"><input type="checkbox" name="Lorem ipsum dolor sit amet, consectetur" value="var-2" checked>&nbsp;Lorem ipsum dolor sit amet, consectetur</p>
+					<span class="items-holder__form-subtitle">Textarea:</span>
+					<textarea class="items-holder__form-textarea" name="textarea" id="1"></textarea>
+					<input  class="items-holder__form-button" type="submit" value="Button">
+					</form>
+				</div>
+			</div>
+		</section>
+		<footer>
+			<p>@Footer content <a href="#">Link footer</a></p>
+		</footer>
+	</div>
+</body>
+</html>
