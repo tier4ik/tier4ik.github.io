@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>PhotoCage</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+	<script src="jquery-3.3.1.min.js"></script>
+</head>
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<h1 class="header__title"><span>Photo</span>Cage app</h1>
+			<nav id="header__menu-hidden">
+				<ul class="header__menu">
+					<li class="header__element"><a href="#" class="header__link"><img class="header__image" src="img/home.png" alt="home">Home</a></li>
+					<li class="header__element"><a href="#" class="header__link"><img class="header__image" src="img/gallery.png" alt="gallery">Gallery</a></li>
+					<li class="header__element"><a href="#" class="header__link"><img class="header__image" src="img/members.png" alt="members">Members</a></li>
+					<li class="header__element"><a href="#" class="header__link"><img class="header__image" src="img/logout.png" alt="logout">Logout</a></li>
+				</ul>
+			</nav>
+		</header>
+		<main class="gallery-container">
+			<h2 class="gallery-container__title">Please select an image from your computer</h2>
+			<form class="gallery-container__form" method="get">
+				<div class="gallery-container__form-browse">
+					<input type="text" placeholder="Type text" name="search">
+					<input type="submit" name="browse" value="Browse">
+				</div>
+				<div class="gallery-container__form-upload">
+					<input id="click-file" type="file" name="upload">
+					<div id="animation-block">
+						<input id="click-button" type="button" value="Upload image">
+					</div>
+				</div>
+			</form>
+			<div>
+				<ul class="gallery-container__image-box">
+					<li class="gallery-container__element">
+						<a href="#" class="gallery-container__image-link"><img src="img/img1.png" alt="" class="gallery-container__image"><i class="fa fa-search-plus" aria-hidden="true"></i><span class="gallery-container__date">10/08/2010</span></a>
+						<h4 class="gallery-container__image-name">Lorem Ipsum is simply </h4>
+						<div class="gallery-container__share-box"><span>Share</span> 
+							<ul class="gallery-container__share-menu">
+								<li class="gallery-container__share-element"><a href="https://twitter.com" class="gallery-container__share-link" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i><div class="gallery-container__share-adress">share in twitter</div></a></li>
+								<li class="gallery-container__share-element"><a href="https://fb.com" class="gallery-container__share-link" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i><div class="gallery-container__share-adress">share in facebook</div></a></li>
+								<li class="gallery-container__share-element"><a href="https://pinterest.com" class="gallery-container__share-link" target="_blank"><i class="fa fa-pinterest-p" aria-hidden="true"></i><div class="gallery-container__share-adress">share in pinterest</div></a></li>
+								<li class="gallery-container__share-element"><a href="https://linkidn.com" class="gallery-container__share-link" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i><div class="gallery-container__share-adress">share in linkidn</div></a></li>
+							</ul>
+						</div>
+					</li>
+					<li class="gallery-container__element">
+						<a href="#" class="gallery-container__image-link"><img src="img/img2.png" alt="" class="gallery-container__image"><i class="fa fa-search-plus" aria-hidden="true"></i><span class="gallery-container__date">10/08/2010</span></a>
+						<h4 class="gallery-container__image-name">Lorem Ipsum is simply </h4>
+						<div class="gallery-container__share-box"><span>Share</span> 
+							<ul class="gallery-container__share-menu">
+								<li class="gallery-container__share-element"><a href="https://twitter.com" class="gallery-container__share-link" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i><div class="gallery-container__share-adress">share in twitter</div></a></li>
+								<li class="gallery-container__share-element"><a href="https://fb.com" class="gallery-container__share-link" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i><div class="gallery-container__share-adress">share in facebook</div></a></li>
+								<li class="gallery-container__share-element"><a href="https://pinterest.com" class="gallery-container__share-link" target="_blank"><i class="fa fa-pinterest-p" aria-hidden="true"></i><div class="gallery-container__share-adress">share in pinterest</div></a></li>
+								<li class="gallery-container__share-element"><a href="https://linkidn.com" class="gallery-container__share-link" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i><div class="gallery-container__share-adress">share in linkidn</div></a></li>
+							</ul>
+						</div>
+					</li>
+					<li class="gallery-container__element">
+						<a href="#" class="gallery-container__image-link"><img src="img/img3.png" alt="" class="gallery-container__image"><i class="fa fa-search-plus" aria-hidden="true"></i><span class="gallery-container__date">10/08/2010</span></a>
+						<h4 class="gallery-container__image-name">Lorem Ipsum is simply </h4>
+						<div class="gallery-container__share-box"><span>Share</span> 
+							<ul class="gallery-container__share-menu">
+								<li class="gallery-container__share-element"><a href="https://twitter.com" class="gallery-container__share-link" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i><div class="gallery-container__share-adress">share in twitter</div></a></li>
+								<li class="gallery-container__share-element"><a href="https://fb.com" class="gallery-container__share-link" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i><div class="gallery-container__share-adress">share in facebook</div></a></li>
+								<li class="gallery-container__share-element"><a href="https://pinterest.com" class="gallery-container__share-link" target="_blank"><i class="fa fa-pinterest-p" aria-hidden="true"></i><div class="gallery-container__share-adress">share in pinterest</div></a></li>
+								<li class="gallery-container__share-element"><a href="https://linkidn.com" class="gallery-container__share-link" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i><div class="gallery-container__share-adress">share in linkidn</div></a></li>
+							</ul>
+						</div>
+					</li>
+					<li class="gallery-container__element">
+						<a href="#" class="gallery-container__image-link"><img src="img/img4.png" alt="" class="gallery-container__image"><i class="fa fa-search-plus" aria-hidden="true"></i><span class="gallery-container__date">10/08/2010</span></a>
+						<h4 class="gallery-container__image-name">Lorem Ipsum is simply </h4>
+						<div class="gallery-container__share-box"><span>Share</span> 
+							<ul class="gallery-container__share-menu">
+								<li class="gallery-container__share-element"><a href="https://twitter.com" class="gallery-container__share-link" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i><div class="gallery-container__share-adress">share in twitter</div></a></li>
+								<li class="gallery-container__share-element"><a href="https://fb.com" class="gallery-container__share-link" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i><div class="gallery-container__share-adress">share in facebook</div></a></li>
+								<li class="gallery-container__share-element"><a href="https://pinterest.com" class="gallery-container__share-link" target="_blank"><i class="fa fa-pinterest-p" aria-hidden="true"></i><div class="gallery-container__share-adress">share in pinterest</div></a></li>
+								<li class="gallery-container__share-element"><a href="https://linkidn.com" class="gallery-container__share-link" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i><div class="gallery-container__share-adress">share in linkidn</div></a></li>
+							</ul>
+						</div>
+					</li>
+					<li class="gallery-container__element">
+						<a href="#" class="gallery-container__image-link"><img src="img/img5.png" alt="" class="gallery-container__image"><i class="fa fa-search-plus" aria-hidden="true"></i><span class="gallery-container__date">10/08/2010</span></a>
+						<h4 class="gallery-container__image-name">Lorem Ipsum is simply </h4>
+						<div class="gallery-container__share-box"><span>Share</span> 
+							<ul class="gallery-container__share-menu">
+								<li class="gallery-container__share-element"><a href="https://twitter.com" class="gallery-container__share-link" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i><div class="gallery-container__share-adress">share in twitter</div></a></li>
+								<li class="gallery-container__share-element"><a href="https://fb.com" class="gallery-container__share-link" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i><div class="gallery-container__share-adress">share in facebook</div></a></li>
+								<li class="gallery-container__share-element"><a href="https://pinterest.com" class="gallery-container__share-link" target="_blank"><i class="fa fa-pinterest-p" aria-hidden="true"></i><div class="gallery-container__share-adress">share in pinterest</div></a></li>
+								<li class="gallery-container__share-element"><a href="https://linkidn.com" class="gallery-container__share-link" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i><div class="gallery-container__share-adress">share in linkidn</div></a></li>
+							</ul>
+						</div>
+					</li>
+					<li class="gallery-container__element">
+						<a href="#" class="gallery-container__image-link"><img src="img/img6.png" alt="" class="gallery-container__image"><i class="fa fa-search-plus" aria-hidden="true"></i><span class="gallery-container__date">10/08/2010</span></a>
+						<h4 class="gallery-container__image-name">Lorem Ipsum is simply </h4>
+						<div class="gallery-container__share-box"><span>Share</span> 
+							<ul class="gallery-container__share-menu">
+								<li class="gallery-container__share-element"><a href="https://twitter.com" class="gallery-container__share-link" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i><div class="gallery-container__share-adress">share in twitter</div></a></li>
+								<li class="gallery-container__share-element"><a href="https://fb.com" class="gallery-container__share-link" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i><div class="gallery-container__share-adress">share in facebook</div></a></li>
+								<li class="gallery-container__share-element"><a href="https://pinterest.com" class="gallery-container__share-link" target="_blank"><i class="fa fa-pinterest-p" aria-hidden="true"></i><div class="gallery-container__share-adress">share in pinterest</div></a></li>
+								<li class="gallery-container__share-element"><a href="https://linkidn.com" class="gallery-container__share-link" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i><div class="gallery-container__share-adress">share in linkidn</div></a></li>
+							</ul>
+						</div>
+					</li>
+					<li class="gallery-container__element">
+						<a href="#" class="gallery-container__image-link"><img src="img/img7.png" alt="" class="gallery-container__image"><i class="fa fa-search-plus" aria-hidden="true"></i><span class="gallery-container__date">10/08/2010</span></a>
+						<h4 class="gallery-container__image-name">Lorem Ipsum is simply </h4>
+						<div class="gallery-container__share-box"><span>Share</span> 
+							<ul class="gallery-container__share-menu">
+								<li class="gallery-container__share-element"><a href="https://twitter.com" class="gallery-container__share-link" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i><div class="gallery-container__share-adress">share in twitter</div></a></li>
+								<li class="gallery-container__share-element"><a href="https://fb.com" class="gallery-container__share-link" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i><div class="gallery-container__share-adress">share in facebook</div></a></li>
+								<li class="gallery-container__share-element"><a href="https://pinterest.com" class="gallery-container__share-link" target="_blank"><i class="fa fa-pinterest-p" aria-hidden="true"></i><div class="gallery-container__share-adress">share in pinterest</div></a></li>
+								<li class="gallery-container__share-element"><a href="https://linkidn.com" class="gallery-container__share-link" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i><div class="gallery-container__share-adress">share in linkidn</div></a></li>
+							</ul>
+						</div>
+					</li>
+					<li class="gallery-container__element">
+						<a href="#" class="gallery-container__image-link"><img src="img/img8.png" alt="" class="gallery-container__image"><i class="fa fa-search-plus" aria-hidden="true"></i><span class="gallery-container__date">10/08/2010</span></a>
+						<h4 class="gallery-container__image-name">Lorem Ipsum is simply </h4>
+						<div class="gallery-container__share-box"><span>Share</span> 
+							<ul class="gallery-container__share-menu">
+								<li class="gallery-container__share-element"><a href="https://twitter.com" class="gallery-container__share-link" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i><div class="gallery-container__share-adress">share in twitter</div></a></li>
+								<li class="gallery-container__share-element"><a href="https://fb.com" class="gallery-container__share-link" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i><div class="gallery-container__share-adress">share in facebook</div></a></li>
+								<li class="gallery-container__share-element"><a href="https://pinterest.com" class="gallery-container__share-link" target="_blank"><i class="fa fa-pinterest-p" aria-hidden="true"></i><div class="gallery-container__share-adress">share in pinterest</div></a></li>
+								<li class="gallery-container__share-element"><a href="https://linkidn.com" class="gallery-container__share-link" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i><div class="gallery-container__share-adress">share in linkidn</div></a></li>
+							</ul>
+						</div>
+					</li>
+					<li class="gallery-container__element">
+						<a href="#" class="gallery-container__image-link"><img src="img/img9.png" alt="" class="gallery-container__image"><i class="fa fa-search-plus" aria-hidden="true"></i><span class="gallery-container__date">10/08/2010</span></a>
+						<h4 class="gallery-container__image-name">Lorem Ipsum is simply </h4>
+						<div class="gallery-container__share-box"><span>Share</span> 
+							<ul class="gallery-container__share-menu">
+								<li class="gallery-container__share-element"><a href="https://twitter.com" class="gallery-container__share-link" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i><div class="gallery-container__share-adress">share in twitter</div></a></li>
+								<li class="gallery-container__share-element"><a href="https://fb.com" class="gallery-container__share-link" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i><div class="gallery-container__share-adress">share in facebook</div></a></li>
+								<li class="gallery-container__share-element"><a href="https://pinterest.com" class="gallery-container__share-link" target="_blank"><i class="fa fa-pinterest-p" aria-hidden="true"></i><div class="gallery-container__share-adress">share in pinterest</div></a></li>
+								<li class="gallery-container__share-element"><a href="https://linkidn.com" class="gallery-container__share-link" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i><div class="gallery-container__share-adress">share in linkidn</div></a></li>
+							</ul>
+						</div>
+					</li>
+					<li class="gallery-container__element">
+						<a href="#" class="gallery-container__image-link"><img src="img/img10.png" alt="" class="gallery-container__image"><i class="fa fa-search-plus" aria-hidden="true"></i><span class="gallery-container__date">10/08/2010</span></a>
+						<h4 class="gallery-container__image-name">Lorem Ipsum is simply </h4>
+						<div class="gallery-container__share-box"><span>Share</span> 
+							<ul class="gallery-container__share-menu">
+								<li class="gallery-container__share-element"><a href="https://twitter.com" class="gallery-container__share-link" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i><div class="gallery-container__share-adress">share in twitter</div></a></li>
+								<li class="gallery-container__share-element"><a href="https://fb.com" class="gallery-container__share-link" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i><div class="gallery-container__share-adress">share in facebook</div></a></li>
+								<li class="gallery-container__share-element"><a href="https://pinterest.com" class="gallery-container__share-link" target="_blank"><i class="fa fa-pinterest-p" aria-hidden="true"></i><div class="gallery-container__share-adress">share in pinterest</div></a></li>
+								<li class="gallery-container__share-element"><a href="https://linkidn.com" class="gallery-container__share-link" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i><div class="gallery-container__share-adress">share in linkidn</div></a></li>
+							</ul>
+						</div>
+					</li>
+					<li class="gallery-container__element">
+						<a href="#" class="gallery-container__image-link"><img src="img/img11.png" alt="" class="gallery-container__image"><i class="fa fa-search-plus" aria-hidden="true"></i><span class="gallery-container__date">10/08/2010</span></a>
+						<h4 class="gallery-container__image-name">Lorem Ipsum is simply </h4>
+						<div class="gallery-container__share-box"><span>Share</span> 
+							<ul class="gallery-container__share-menu">
+								<li class="gallery-container__share-element"><a href="https://twitter.com" class="gallery-container__share-link" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i><div class="gallery-container__share-adress">share in twitter</div></a></li>
+								<li class="gallery-container__share-element"><a href="https://fb.com" class="gallery-container__share-link" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i><div class="gallery-container__share-adress">share in facebook</div></a></li>
+								<li class="gallery-container__share-element"><a href="https://pinterest.com" class="gallery-container__share-link" target="_blank"><i class="fa fa-pinterest-p" aria-hidden="true"></i><div class="gallery-container__share-adress">share in pinterest</div></a></li>
+								<li class="gallery-container__share-element"><a href="https://linkidn.com" class="gallery-container__share-link" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i><div class="gallery-container__share-adress">share in linkidn</div></a></li>
+							</ul>
+						</div>
+					</li>
+					<li class="gallery-container__element">
+						<a href="#" class="gallery-container__image-link"><img src="img/img12.png" alt="" class="gallery-container__image"><i class="fa fa-search-plus" aria-hidden="true"></i><span class="gallery-container__date">10/08/2010</span></a>
+						<h4 class="gallery-container__image-name">Lorem Ipsum is simply </h4>
+						<div class="gallery-container__share-box"><span>Share</span> 
+							<ul class="gallery-container__share-menu">
+								<li class="gallery-container__share-element"><a href="https://twitter.com" class="gallery-container__share-link" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i><div class="gallery-container__share-adress">share in twitter</div></a></li>
+								<li class="gallery-container__share-element"><a href="https://fb.com" class="gallery-container__share-link" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i><div class="gallery-container__share-adress">share in facebook</div></a></li>
+								<li class="gallery-container__share-element"><a href="https://pinterest.com" class="gallery-container__share-link" target="_blank"><i class="fa fa-pinterest-p" aria-hidden="true"></i><div class="gallery-container__share-adress">share in pinterest</div></a></li>
+								<li class="gallery-container__share-element"><a href="https://linkidn.com" class="gallery-container__share-link" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i><div class="gallery-container__share-adress">share in linkidn</div></a></li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</main>
+		<footer class="footer">
+			<p class="footer__text">&copy; 2013 Photocage app  powered by cssauthor.com</p>
+		</footer>
+	</div>
+	<script>
+		$(document).ready(function(){
+			$("#animation-block").click(function () {
+			    $("#click-file").trigger('click');
+			});
+		});
+	</script>
+	<script>
+		$(document).ready(function(){
+    		$('#header__menu-hidden').on('click', function() {
+	       		$('.header__menu').slideToggle(200, function(){
+	            	if( $(this).css('display') === "none"){
+	                	$(this).removeAttr('style');
+	                }
+	                if( $(this).css('display') === "block"){
+	                	$(this).css('display', ('flex'))
+	                }
+       			});
+    		});
+		});
+	</script>
+</body>
+</html>
