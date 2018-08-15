@@ -35,9 +35,24 @@
   </div>
   <script src="my-slider.js"></script>
   <script>
+    let slider = new MySlider(document.querySelector('.container')); 
+    slider.init();
+  </script>
+  <script>
     window.onload = function() {
-      let slider = new MySlider(document.querySelector('.container')); 
-      slider.init();
+      let elements = document.querySelectorAll('.slider-element');
+      for (var i = 0; i < elements.length; i++) {
+        let imgW = getComputedStyle(elements[i].querySelector('img')).width;
+        elements[i].style.width = imgW;
+      }
+      if(self.wagon.offsetWidth < self.rails.offsetWidth) {
+        let railsCenter = self.rails.offsetWidth / 2,
+        wagonCenter = self.wagon.offsetWidth / 2;
+        self.wagon.style.left = railsCenter - wagonCenter + 'px';
+        self.wagon.removeEventListener('mousedown', self._wagonCatcher);
+        document.getElementsByClassName('slider-forward')[0].removeEventListener('click', self._clickToMove);
+        document.getElementsByClassName('slider-back')[0].removeEventListener('click', self._clickToMove);
+        }
       document.body.style.opacity = '1';
     }
   </script>
