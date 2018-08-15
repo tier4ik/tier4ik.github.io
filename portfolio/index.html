@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>my-slider</title>
   <link type="text/css" rel="stylesheet" href="user.css">
+  <link rel="stylesheet" href="my-slider.css">
   <style>
     body {
       opacity: 0;
@@ -34,20 +35,9 @@
   </div>
   <script src="my-slider.js"></script>
   <script>
-    let slider = new MySlider(document.querySelector('.container')); 
-    slider.init();
-  </script>
-  <script>
-    var head = document.querySelector('head'), 
-        link = document.createElement('link');
-
-    link.type = 'text/css';
-    link.rel = 'stylesheet';
-    link.href = 'my-slider.css';
-    head.appendChild(link);
-  </script>
-  <script>
     window.onload = function() {
+      let slider = new MySlider(document.querySelector('.container')); 
+      slider.init();
       document.body.style.opacity = '1';
     }
   </script>

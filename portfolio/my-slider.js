@@ -121,22 +121,25 @@ class MySlider {
 		this.rails.append(forward);
 		this.rails.append(back);
 	}
-	_innerContentChecker() {
-		window.onload = function() {
-			if(self.wagon.offsetWidth < self.rails.offsetWidth) {
-				let railsCenter = self.rails.offsetWidth / 2,
-					wagonCenter = self.wagon.offsetWidth / 2;
-				self.wagon.style.left = railsCenter - wagonCenter + 'px';
-				self.wagon.removeEventListener('mousedown', self._wagonCatcher);
-				document.getElementsByClassName('slider-forward')[0].removeEventListener('click', self._clickToMove);
-				document.getElementsByClassName('slider-back')[0].removeEventListener('click', self._clickToMove);
-			}
-		}
+	_contentChecker() {
+		let elements = document.querySelectorAll('.slider-element');
+      	for (var i = 0; i < elements.length; i++) {
+	        let imgW = getComputedStyle(elements[i].querySelector('img')).width;
+	        elements[i].style.width = imgW;
+      	}
+      	if(self.wagon.offsetWidth < self.rails.offsetWidth) {
+	        let railsCenter = self.rails.offsetWidth / 2,
+	        wagonCenter = self.wagon.offsetWidth / 2;
+	        self.wagon.style.left = railsCenter - wagonCenter + 'px';
+	        self.wagon.removeEventListener('mousedown', self._wagonCatcher);
+	        document.getElementsByClassName('slider-forward')[0].removeEventListener('click', self._clickToMove);
+	        document.getElementsByClassName('slider-back')[0].removeEventListener('click', self._clickToMove);
+      	}
 	}
 	init() {
 		this._mainChanger();
 		this.container.prepend(this.mainDiv);
 		this._navGenerator();
-		this._innerContentChecker();
+		this._contentChecker();
 	}
 }
