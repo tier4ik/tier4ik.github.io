@@ -33,7 +33,7 @@ class Metronome {
 		}else return false;
 	}
 	getInterval() {
-		this.interval = 60 / this.temp * 1000;
+		this.interval = Math.round(60 / this.temp * 1000);
 	}
 	play() {
 		this.getTemp();
