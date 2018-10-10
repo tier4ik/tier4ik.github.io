@@ -1,0 +1,171 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: sans-serif;
+}
+html {
+	height: 100%;
+	background-image: url('img/otkrytyj-urok-noty.jpg');
+}
+body {
+	height: 100%;
+}
+#metronom {
+	display: block;
+	width: 100%;
+	height: 100%;
+	padding-top: 80px;
+	background: linear-gradient(rgba(208, 174, 188, .95), rgba(33, 52, 81, .9));
+}
+#temp {
+	display: block;
+	width: 350px;
+	height: 400px;
+	margin: auto;
+	border: 1px ;
+	border-radius: 20px;
+	font-size: 160px;
+	font-weight:  200;
+	text-align: center;
+	background-color: #ddd;
+	margin-bottom: 60px;
+	position: relative;
+}
+#temp:focus {
+	outline: none
+}
+.buttons {
+	width: 400px;
+	height: 100px;
+	margin: 0 auto 20px;
+	font-size: 0;
+	border-radius: 20px;
+}
+#start, #stop {
+	display: inline-block;
+	width: 50%;
+	height: 100%;
+	border: none;
+	font-size: 42px;
+	text-transform: uppercase;
+	cursor: pointer;
+}
+#start:focus, #stop:focus {
+	outline: none;
+}
+#start {
+	border-top-left-radius: 20px;
+	border-bottom-left-radius: 20px;
+	background: linear-gradient(to right, #eee, #aaa);
+}
+#stop {
+	border-top-right-radius: 20px;
+	border-bottom-right-radius: 20px;
+	background: linear-gradient(to right, #aaa, #666);
+}
+#animation {
+	width: 400px;
+	height: 14px;
+	margin: auto;
+	background-color: #fff;
+	border-radius: 10px;
+	position: relative;
+}
+#ball {
+	width: 32px;
+	height: 32px;
+	border-radius: 100%;
+	background-color: #d45d7d;
+	position: absolute;
+	top: -8px;
+	left: 185px;
+}
+.active {
+	animation-name: slide;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+@keyframes slide {
+	0% {
+		left: 185px;
+	}
+	25% {
+		left: 370px;
+	}
+	50% {
+		left: 185px;
+	}
+	75% {
+		left: 0px;
+	}
+	100% {
+		left: 185px;
+	}
+}
+.menu-button {
+	position: absolute;
+	top: 30px;
+	left: 30px;
+	font-size: 48px;
+	color: #555;
+	padding: 10px 20px;
+	cursor: pointer;
+}
+.side-menu {
+	width: auto;
+	height: auto;
+	position: absolute;
+	top: 105px;
+	left: -300px;
+	padding: 0 20px;
+	font-family: Tahoma;
+	color: rgba(255, 255, 255, .75);
+	transition: all .3s ease;
+}
+.side-menu_active {
+	left: 0;
+}
+.side-menu__title {
+	display: block;
+	font-size: 24px;
+	margin: 40px 0 20px;
+}
+.side-menu label {
+	display: block;
+	font-size: 20px;
+}
+
+@media screen and (max-width: 576px) {
+	#temp {
+		width: 250px;
+		height: 300px;
+		font-size: 140px;
+	}
+}
+@media screen and (max-width: 420px) {
+	#menu-button {
+		top: 10px;
+	}
+	#temp {
+		width: 70%;
+		height: 200px;
+		font-size: 100px;
+	}
+	.buttons {
+		width: 96%;
+	}
+	#start, #stop {
+		font-size: 20px;
+	}
+	#animation {
+		width: 96%;
+	}
+	#ball {
+		left: 48%;
+	}
+	#side-menu {
+		top: 60px;
+	}
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang='ru'>
+	<head>
+		<meta charset='UTF-8'>
+		<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+		<title>Metronome</title>
+		<script src='Metronome.js'></script>
+		<script src='script.js'></script>
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<form id='metronom' class="metronome">
+			<div class="menu-button" id="menu-button">
+				<span>&equiv;</span>
+			</div>
+			<div class="side-menu" id="side-menu">
+				<span class="side-menu__title">Metronome Sound</span>
+				<label for="elect">Electro
+				<input type="radio" name="sound" value="electro" id="elect" src="sound/klick_electro.mp3" checked>
+				</label>
+				<label for="mech">Mechanic
+				<input type="radio" name="sound" value="mechanic" id="mech" src="sound/klick_mech.mp3">
+				</label>
+				<span class="side-menu__title">Metronome volume</span>
+				<input type="range" value="1" min="0" max="1" step="0.1" id="range">
+			</div>
+			<input type='text' name='temp' value='60' id='temp'>
+			<div class='buttons'>
+				<input type='button' value='start' id='start'>
+				<input type='button' value='stop' id='stop'>
+			</div>
+			<div id='animation'>
+				<div id='ball'></div>
+			</div>
+		</form>
+	</body>
+</html>
