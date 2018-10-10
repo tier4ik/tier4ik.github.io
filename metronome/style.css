@@ -17,6 +17,7 @@ body {
 	height: 100%;
 	padding-top: 80px;
 	background: linear-gradient(rgba(208, 174, 188, .95), rgba(33, 52, 81, .9));
+	overflow: hidden;
 }
 #temp {
 	display: block;
@@ -160,12 +161,36 @@ body {
 		font-size: 20px;
 	}
 	#animation {
-		width: 96%;
+		margin-top: 60px;
+		width: 100%;
+		height: auto;
+		background-color: transparent;
+		text-align: center;
 	}
-	#ball {
-		left: 48%;
+	#ball{
+		position: static;
+		margin: auto;
 	}
 	#side-menu {
 		top: 60px;
+	}
+	@keyframes slide {
+		0% {
+		}
+		25% {
+			transform: scale(1.4);
+		}
+		50% {
+			transform: scale(1);
+			opacity: .6;
+		}
+		75% {
+			transform: scale(0.6);
+			opacity: .2;
+		}
+		100% {
+			transform: scale(1);
+			opacity: 1;
+		}
 	}
 }
