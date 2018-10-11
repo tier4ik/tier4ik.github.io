@@ -25,7 +25,12 @@ class Metronome {
 		this.kick.volume = value;
 	}
 	getTemp() {
-		this.temp = +this.tempHolder.value;
+		let temp = +this.tempHolder.value;
+		if(temp < 0 || temp > 320) {
+			this.temp = '';
+		}else{
+			this.temp = temp;
+		}
 	}
 	valueCheck() {
 		if(!isNaN(parseFloat(this.temp)) && isFinite(this.temp)) {
@@ -43,10 +48,15 @@ class Metronome {
 			this.getInterval();
 			this.getAudioSrc();
 			this.kick.preload = 'auto';
-			this.globalInterval = setInterval(function() {
-									  self.kick.play();
-									  self.getVolume();
-								  }, self.interval);
+		// 	this.globalInterval = setInterval(function() {
+		// 							 self.kick.play();
+		// 							 self.getVolume();
+		// 						  }, self.interval)
+			(function go() {
+							self.kick.play();
+							self.getVolume();
+							self.globalInterval = setTimeout(go, self.interval);
+						})();
 		}else{
 			return false;
 		}
@@ -54,6 +64,6 @@ class Metronome {
 	stop() {
 		this.isWorking = false;
 		this.ball.classList.remove('active');
-		clearInterval(this.globalInterval);
+		clearTimeout(this.globalInterval);
 	}
 }
