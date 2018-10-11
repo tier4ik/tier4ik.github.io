@@ -40,12 +40,13 @@ class Metronome {
 		if(this.valueCheck() && this.isWorking === false) {
 			this.isWorking = true;
 			this.ball.classList.add('active');
-			this.getAudioSrc();
 			this.getInterval();
+			this.getAudioSrc();
+			this.kick.preload = 'auto';
 			this.globalInterval = setInterval(function() {
-				self.kick.play();
-				self.getVolume();
-			}, self.interval)
+									  self.kick.play();
+									  self.getVolume();
+								  }, self.interval);
 		}else{
 			return false;
 		}
