@@ -47,16 +47,10 @@ class Metronome {
 			this.ball.classList.add('active');
 			this.getInterval();
 			this.getAudioSrc();
-			this.kick.preload = 'auto';
-		// 	this.globalInterval = setInterval(function() {
-		// 							 self.kick.play();
-		// 							 self.getVolume();
-		// 						  }, self.interval)
-			(function go() {
-							self.kick.play();
-							self.getVolume();
-							self.globalInterval = setTimeout(go, self.interval);
-						})();
+			this.globalInterval = setInterval(function() {
+									 self.kick.play();
+									 self.getVolume();
+								  }, self.interval)
 		}else{
 			return false;
 		}
@@ -64,6 +58,6 @@ class Metronome {
 	stop() {
 		this.isWorking = false;
 		this.ball.classList.remove('active');
-		clearTimeout(this.globalInterval);
+		clearInterval(this.globalInterval);
 	}
 }
