@@ -46,7 +46,8 @@
 	background: rgba(256, 256, 256, .5);
 }
 .slider-element img {
-	width: auto;
+	min-width: auto;
+	max-width: 320px;
 	height: 100%;
 	border-radius: 7px;
 }
@@ -83,6 +84,7 @@
 .slider-main img {
 	display: block;
 	max-width: 100%;
+	min-height: 100%;
 }
 .slider-forward, .slider-back {
 	position: absolute;
