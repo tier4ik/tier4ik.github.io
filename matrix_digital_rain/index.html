@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>matrix_rain</title>
+	<script src='symbol_and_stream_objects.js'></script>
+	<style>
+		* {
+			padding: 0;
+			margin: 0;
+		}
+		canvas {
+			display: block;
+		}
+	</style>
+</head>
+<body>
+	<canvas id="matrix"></canvas>
+
+	<script>
+		let canvas = document.getElementById('matrix');
+		canvas.width = window.innerWidth;
+		canvas.height = window.innerHeight;
+		let ctx = canvas.getContext('2d');
+		// let symbol;
+		let speed = Math.round(Math.random()*5 + 5);
+		let x = 0;
+		let y = 40;
+		let symbolSize = 26;
+		let frameCount = 0;
+		let complitArray = [];
+		//
+		// symbol = new Symbol(x, y, speed);
+		// symbol.setToRandomSymbol();
+		//
+		for (var i = 0; i < canvas.width; i+=symbolSize) {
+				let stream = new Stream();
+				stream.generateSymbols(i, Math.random() - 200);
+				complitArray.push(stream);
+			}
+		//
+		function draw() {
+			ctx.fillStyle = 'rgba(0, 0, 0, .6)';
+			ctx.fillRect(0, 0, canvas.width, canvas.height);
+			// symbol.render();
+			for(stream of complitArray) {
+				stream.render();
+			}
+			frameCount++;
+		}
+		draw();
+		setInterval(draw, 50);
+	</script>
+</body>
+</html>
