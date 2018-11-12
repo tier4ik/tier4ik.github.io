@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src='Snowflake.js'></script>
+	<style>
+		* {
+			padding: 0;
+			margin: 0;
+		}
+	</style>
+</head>
+<body>
+	<canvas id='snow'></canvas>
+	<script>
+		//
+		let snowArr = [],
+				gravity = {x: 0, y: 0.02};
+		//
+		const canvas = document.querySelector('#snow');
+		canvas.style.display = 'block';
+		canvas.width = window.innerWidth;
+		canvas.height = window.innerHeight;
+		const ctx = canvas.getContext('2d');
+		//
+		let imagesPlate;
+		let imagesSeparated = [];
+		let rotate;
+		//предзагружаем изображения снежинок
+		function preload() {
+			let loadImg = new Image();
+			loadImg.src = 'flakes32.png';
+			loadImg.onload = function() {
+				imagesPlate = loadImg;
+				for (let x = 0; x < imagesPlate.width; x += 32) {
+					for(let y = 0; y < imagesPlate.height; y += 32) {
+						let subCanvas = document.createElement('canvas');
+						subCanvas.width = 32;
+						subCanvas.height = 32;
+						let subCtx = subCanvas.getContext('2d');
+						subCtx.drawImage(imagesPlate, x, y, 32, 32, 0, 0, subCanvas.width, subCanvas.height);
+						let strSrc = subCanvas.toDataURL();
+						let subImg = new Image();
+						subImg.src = strSrc;
+						imagesSeparated.push(subImg);
+					}
+				}
+			}
+		};
+		preload();
+		//
+		setTimeout(function() {
+			for(let i = 0; i < 300; i++) {
+			let x = Math.floor(Math.random() * canvas.width);
+			let y = Math.floor(Math.random() * canvas.height);
+			let index = Math.floor(Math.random() * 256);
+			let design = imagesSeparated[index];
+			snowArr.push(new Snowflake(x, y, design));
+		}
+	}, 100)
+		
+		//
+		let interval = setInterval(draw, 30);
+		//
+		function draw() {
+			ctx.fillStyle = '#000';
+			ctx.fillRect(0, 0, canvas.width, canvas.height);
+			// snowArr.push(new Snowflake());
+			for (flake of snowArr) {
+				flake.applyForce(gravity);
+				flake.update();
+				flake.render();
+			}
+			// for (var i = snowArr.length - 1; i > 0; i--) {
+			// 	if(snowArr[i].offVision()) {
+			// 		snowArr.splice(i, 1);
+			// 	}
+			// }
+		}
+	</script>
+</body>
+</html>
