@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Airbooking</title>
+	<script src='../node_modules/jquery/dist/jquery.min.js'></script>
+	<script src='script/scripts.js'></script>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<header class="header">
+		<div class="header__burger-menu" id="button">
+			<i class="fas fa-bars"></i>
+		</div>
+		<div class="container">
+			<div class="row justify-content-lg-center">
+			<div class="col-sm-4 offset-1 col-lg-3">
+				<h1 class="header__title">Airbooking</h1>
+			</div>
+		</div>
+		</div>
+		<div class="header__search">
+			<form class="header__search-form">
+				<input type="search" name="search" placeholder="let`s search smt">
+			</form>
+			<i class="fas fa-search" id="search-button"></i>
+		</div>
+	</header>
+	<section class="availability">
+		<aside class="contacts">
+			<ul class="contacts__menu">
+				<li class="contacts__element"><a href="#" class="contacts__link"><i class="fab fa-facebook-f"></i></a></li>
+				<li class="contacts__element"><a href="#" class="contacts__link"><i class="fab fa-twitter"></i></a></li>
+				<li class="contacts__element"><a href="#" class="contacts__link"><i class="fab fa-linkedin-in"></i></a></li>
+				<li class="contacts__element"><a href="#" class="contacts__link"><i class="fab fa-instagram"></i></a></li>
+			</ul>
+		</aside>
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-sm-8 col-xl-7">
+					<h2 class="availability__title">A Brand New Hotel Beyond Ordinary</h2>
+				</div>
+			</div>
+			<div class="row justify-content-center">
+				<div class="col-sm-6 col-md-5 col-lg-3">
+					<a class="availability__button mx-auto" href="#">Explore it</a>
+				</div>
+			</div>
+			<div class="row justify-content-center dates-form">
+						<div class="col-10 col-sm-4 col-lg-2 mb-2 dates-form__checkIn">
+							<span class="dates-form__title">Check In</span>
+							<select class="dates-form__day">
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="5">5</option>
+								<option value="6">6</option>
+								<option value="7">7</option>
+								<option value="8">8</option>
+								<option value="9">9</option>
+								<option value="10">10</option>
+								<option value="11">11</option>
+								<option value="12">12</option>
+								<option value="13">13</option>
+								<option value="14">14</option>
+								<option value="15">15</option>
+								<option value="16">16</option>
+								<option value="17">17</option>
+								<option value="18">18</option>
+								<option value="19">19</option>
+								<option value="20" selected>20</option>
+								<option value="21">21</option>
+								<option value="22">22</option>
+								<option value="23">23</option>
+								<option value="24">24</option>
+								<option value="25">25</option>
+								<option value="26">26</option>
+								<option value="27">27</option>
+								<option value="28">28</option>
+								<option value="29">29</option>
+								<option value="30">30</option>
+								<option value="31">31</option>
+							</select>
+							<select name="date-in" id="dateIn" class="dates-form__month">
+								<option value="jan">jan</option>
+								<option value="feb">feb</option>
+								<option value="mar">mar</option>
+								<option value="apr" selected>apr</option>
+								<option value="may">may</option>
+								<option value="jun">jun</option>
+								<option value="jul">jul</option>
+								<option value="aug">aug</option>
+								<option value="sep">sep</option>
+								<option value="oct">oct</option>
+								<option value="nov">nov</option>
+								<option value="dec">dec</option>
+							</select>
+						</div>
+						<div class="col-10 col-sm-4 col-lg-2 mb-2 dates-form__checkOut">
+							<span class="dates-form__title">Check Out</span>
+							<select class="dates-form__day">
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="5">5</option>
+								<option value="6">6</option>
+								<option value="7">7</option>
+								<option value="8">8</option>
+								<option value="9">9</option>
+								<option value="10">10</option>
+								<option value="11">11</option>
+								<option value="12">12</option>
+								<option value="13">13</option>
+								<option value="14">14</option>
+								<option value="15">15</option>
+								<option value="16">16</option>
+								<option value="17">17</option>
+								<option value="18">18</option>
+								<option value="19">19</option>
+								<option value="20" selected>20</option>
+								<option value="21">21</option>
+								<option value="22">22</option>
+								<option value="23">23</option>
+								<option value="24">24</option>
+								<option value="25">25</option>
+								<option value="26">26</option>
+								<option value="27">27</option>
+								<option value="28">28</option>
+								<option value="29">29</option>
+								<option value="30">30</option>
+								<option value="31">31</option>
+							</select>
+							<select name="date-in" id="dateOut" class="dates-form__month">
+								<option value="jan">jan</option>
+								<option value="feb">feb</option>
+								<option value="mar">mar</option>
+								<option value="apr">apr</option>
+								<option value="may">may</option>
+								<option value="jun">jun</option>
+								<option value="jul">jul</option>
+								<option value="aug">aug</option>
+								<option value="sep">sep</option>
+								<option value="oct">oct</option>
+								<option value="nov">nov</option>
+								<option value="dec">dec</option>
+							</select>
+						</div>
+						<div class="col-10 col-sm-4 col-lg-2 mb-2 dates-form__guests">
+							<span class="dates-form__title">Guests</span>
+							<span class="dates-form__day" id="guests-number">3</span>
+							<select name="date-in" id="guests" class="dates-form__month">
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3" selected>3</option>
+								<option value="4">4</option>
+								<option value="5">5</option>
+							</select>
+						</div>
+						<div class="col-10 col-sm-5 col-lg-3 dates-form__check">
+							<a href='#' class="dates-form__button">Check Availability</a>
+						</div>
+			</div>
+		</div>
+	</section>
+	<section class="rooms">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-md-4">
+					<h2 class="rooms__title">Our Rooms</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-6 col-sm-6 col-md-4">
+					<div class="rooms__room">
+						<img src="img/room_1.png" alt="room" class="rooms__image">
+						<div class="rooms__details">
+							<span class="rooms__class">Family room</span>
+							<span class="rooms__price">From 30$</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6 col-md-4">
+					<div class="rooms__room">
+						<img src="img/room_2.png" alt="room" class="rooms__image">
+						<div class="rooms__details">
+							<span class="rooms__class">Luxary room</span>
+							<span class="rooms__price">From 30$</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6 col-md-4">
+					<div class="rooms__room">
+						<img src="img/room_3.png" alt="room" class="rooms__image">
+						<div class="rooms__details">
+							<span class="rooms__class">Single room</span>
+							<span class="rooms__price">From 30$</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6 col-md-4">
+					<div class="rooms__room">
+						<img src="img/room_4.png" alt="room" class="rooms__image">
+						<div class="rooms__details">
+							<span class="rooms__class">Double room</span>
+							<span class="rooms__price">From 30$</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6 col-md-4">
+					<div class="rooms__room">
+						<img src="img/room_5.png" alt="room" class="rooms__image">
+						<div class="rooms__details">
+							<span class="rooms__class">Family room</span>
+							<span class="rooms__price">From 30$</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6 col-md-4">
+					<div class="rooms__room">
+						<img src="img/room_6.png" alt="room" class="rooms__image">
+						<div class="rooms__details">
+							<span class="rooms__class">Family room</span>
+							<span class="rooms__price">From 30$</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="best-room">
+		<div class="container">
+			<div class="row align-items-middle">
+				<div class="col-md-9">
+					<div class="best-room__photo">
+						<img src="img/best-room1.png" alt="the best room" class="best-room__image">
+					</div>
+				</div>
+				<div class="col-sm-12 col-lg-6">
+					<div class="best-room__description">
+						<h3 class="best-room__title">Explorer Your Best Room</h3>
+						<p class="best-room__text">
+							Phasellus enim libero, blandit vel sapien vitae, condimentum ultricies magna et. Quisque euismod orci ut et lobortis. Phasellus enim libero, blandit vel sapien vitae, condimentum ultricies magna et. Quisque euismod orci ut et lobortis. Phasellus enim libero.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="services">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-md-4">
+					<h2 class="services__title">Our Services</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4">
+					<div class="restaurant">
+						<i class="fas fa-utensils restaurant__logo"></i>
+						<span class="restaurant__title">Restaurant</span>
+						<p class="restaurant__text">
+							Phasellus enim libero, blandit vel sapien vitae, condimentum ultricies magna et. Quisque euismod orci ut et lobortis.
+						</p>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="sport">
+						<i class="fas fa-baseball-ball sport__logo"></i>
+						<span class="sport__title">Sports Club</span>
+						<p class="sport__text">
+							Phasellus enim libero, blandit vel sapien vitae, condimentum ultricies magna et. Quisque euismod orci ut et lobortis.
+						</p>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="pick-up">
+						<i class="fas fa-car pick-up__logo"></i>
+						<span class="pick-up__title">Pick up</span>
+						<p class="pick-up__text">
+							Phasellus enim libero, blandit vel sapien vitae, condimentum ultricies magna et. Quisque euismod orci ut et lobortis.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="find-room">
+		<div class="find-room-photo">
+			<img src="img/best-room.png" alt="" class="find-room-photo__image">
+		</div>
+		<div class="find-room-description">
+			<h3 class="find-room-description__title">Find Your Best Room Here</h3>
+			<p class="find-room-description__text">
+				Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. 
+			</p>
+			<p class="find-room-description__text">
+				Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam.
+			</p>
+			<a href="#" class="find-room-description__button">Read More</a>
+		</div>
+	</section>
+	<section class="review">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-md-6">
+					<h2 class="review__title">From The Guest</h2>
+				</div>
+			</div>
+			<div class="row justify-content-center">
+				<div class="col-md-8">
+					<p class="review__text">
+						Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+					</p>
+				</div>
+			</div>
+			<div class="row justify-content-center no-gutters">
+				<div class="col-sm-8 col-lg-4">
+					<div class="guest">
+						<img src="img/guestpng.png" alt="photo" class="guest__photo">
+						<span class="guest__name">Andrew Strauss</span>
+						<span class="guest__from">From New York, USA</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="video">
+		<div class="video__inner-container">
+			<div class="container">
+				<div class="row justify-content-center">
+					<div class="col-md-6">
+						<div class="video__title">Keep Calm And Enjoy Vacation</div>
+					</div>
+					<div class="w-100"></div>
+					<div class="col-md-2">
+						<a href="" class="video__play-button"><i class="fas fa-play-circle"></i></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="news">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-md-5">
+					<h2 class="news__title">Latest News</h2>
+				</div>
+				<div class="w-100"></div>
+				<div class="col-sm-6 col-md-4">
+					<div class="news__news carousel slide carousel-fade" id="carousel">
+						<div class="carousel-inner">
+							<div class="news__block-1 carousel-item active">
+								<img src="img/room_5.png" alt="block-1">
+							</div>
+							<div class="news__block-1 carousel-item">
+								<img src="img/room_3.png" alt="block-1">
+							</div>
+							<div class="news__block-1 carousel-item">
+								<img src="img/room_2.png" alt="block-1">
+							</div>
+						</div>
+					</div>	
+				</div>
+				<div class="col-sm-6 col-md-4">
+					<div class="news__news carousel slide" id="carousel_2">
+						<div class="carousel-inner">
+							<div class="news__block-1 carousel-item active">
+								<img src="img/room_1.png" alt="block-2" class="news__block-2">
+								<div class="news__description">
+									<span class="news__name">This is a slider post</span>
+									<span class="news__date">jun 18, 2018</span>
+								</div>
+							</div>
+							<div class="news__block-1 carousel-item">
+								<img src="img/room_6.png" alt="block-2" class="news__block-2">
+								<div class="news__description">
+									<span class="news__name">This is a slider post</span>
+									<span class="news__date">jun 18, 2018</span>
+								</div>
+							</div>
+							<div class="news__block-1 carousel-item">
+								<img src="img/room_4.png" alt="block-2" class="news__block-2">
+								<div class="news__description">
+									<span class="news__name">This is a slider post</span>
+									<span class="news__date">jun 18, 2018</span>
+								</div>
+							</div>
+						</div>
+					</div>		
+				</div>
+				<div class="col-sm-6 col-md-4">
+					<div class="news__news">
+						<img src="img/room_1.png" alt="block-3" class="news__block-3">
+					</div>		
+				</div>
+				<div class="col-sm-6 col-md-4">
+					<div class="news__news news__news_text-only">
+						<span class="news__name">This is a slider post</span>
+						<span class="news__date">jun 18, 2018</span>
+						<p class="news__text">
+							Phasellus enim libero, blandit vel sapien vitae, condimentum ultricies magna et. 
+							Quisque euismod orci ut et lobortis.
+						</p>
+						<a href="#" class="news__more">Read More</a>
+					</div>		
+				</div>
+				<div class="col-sm-6 col-md-4">
+					<div class="news__news">
+						<img src="img/room_1.png" alt="block-5" class="news__block-5">
+						<div class="news__description">
+							<span class="news__name">This is a slider post</span>
+							<span class="news__date">jun 18, 2018</span>
+						</div>
+					</div>		
+				</div>
+				<div class="col-sm-6 col-md-4">
+					<div class="news__news news__news_text-only">
+						<span class="news__name">This is a slider post</span>
+						<span class="news__date">jun 18, 2018</span>
+						<p class="news__text">
+							Phasellus enim libero, blandit vel sapien vitae, condimentum ultricies magna et. 
+							Quisque euismod orci ut et lobortis.
+						</p>
+						<a href="#" class="news__more">Read More</a>
+					</div>		
+				</div>
+			</div>
+		</div>
+	</section>
+	<footer class="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-6 col-md-4">
+					<div class="location">
+						<h2 class="location__title">Airbooking</h2>
+						<div class="location__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus incidunt explicabo voluptatibus.</div>
+						<div class="location__adress">
+							<span>2345 Lyon Avenue</span>
+							<span>Boston, MA, Massachusetts</span>
+						</div>
+						<div class="location__phone">
+							<span>508-960-5584</span>
+							<span>857-366-4240</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6 col-md-4 col-xl-3">
+					<div class="links">
+						<h4 class="links__title">Quick links</h4>
+						<ul class="links__menu">
+							<li class="links__element"><a href="#" class="links__link">Accomocation</a></li>
+							<li class="links__element"><a href="#" class="links__link">Food & Drinks</a></li>
+							<li class="links__element"><a href="#" class="links__link">Beach Venues</a></li>
+							<li class="links__element"><a href="#" class="links__link">Amenities</a></li>
+						</ul>
+						<ul class="links__menu">
+							<li class="links__element"><a href="#" class="links__link">Noordwijk</a></li>
+							<li class="links__element"><a href="#" class="links__link">Wellness</a></li>
+							<li class="links__element"><a href="#" class="links__link">Manifesto</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-sm-12 col-md-4 col-xl-3 offset-xl-1">
+					<div class="connect-us">
+						<h4 class="connect-us__title">Connect With Us</h4>
+						<a href="#" class="connect-us__link"><i class="fab fa-facebook-f"></i></a>
+						<a href="#" class="connect-us__link"><i class="fab fa-twitter"></i></a>
+						<a href="#" class="connect-us__link"><i class="fab fa-linkedin-in"></i></a>
+						<a href="#" class="connect-us__link"><i class="fab fa-youtube"></i></a>
+						<a href="#" class="connect-us__link"><i class="fab fa-instagram"></i></a>
+					</div>
+				</div>
+				<div class="w-100"></div>
+				<div class="col-12">
+					<p class="copyright">&copy; 2018 Airbooking - All Rights Reserved</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<script src='../node_modules/bootstrap/dist/js/bootstrap.js'></script>
+	<script>
+		$('#carousel').carousel();
+		$('#carousel_2').carousel({
+			interval: 3000
+		});
+	</script>
+</body>
+</html>
