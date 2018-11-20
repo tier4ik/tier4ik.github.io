@@ -10141,6 +10141,10 @@ select {
     cursor: pointer; }
   .header__search {
     text-align: right;
+<<<<<<< HEAD
+=======
+    width: 400px;
+>>>>>>> c0ec45a71ffa7938cfb3edf3f0b673b9026c61b9
     left: auto;
     right: 0; }
     .header__search .fas {
@@ -10151,9 +10155,12 @@ select {
       line-height: 96px; }
   .header__search-form {
     display: none;
+<<<<<<< HEAD
     position: absolute;
     right: 100%;
     top: 0;
+=======
+>>>>>>> c0ec45a71ffa7938cfb3edf3f0b673b9026c61b9
     width: 280px;
     height: 100%; }
     .header__search-form input {
@@ -10572,6 +10579,7 @@ select {
     z-index: 0; } }
 
 @media screen and (max-width: 862px) {
+<<<<<<< HEAD
   .header__search-form {
     right: 0;
     top: 100%;
@@ -10581,9 +10589,23 @@ select {
   .availability, .best-room, .services, .rooms, .news, .review, .video__inner-container, .news, .footer {
     padding: 60px 0 40px; }
   .header__burger-menu, .header__search {
+=======
+  .availability, .best-room, .services, .rooms, .news, .review, .video__inner-container, .news, .footer {
+    padding: 60px 0 40px; }
+  .header__burger-menu, #search-button {
+>>>>>>> c0ec45a71ffa7938cfb3edf3f0b673b9026c61b9
     width: 40px; } }
 
 @media screen and (max-width: 610px) {
   .find-room-photo {
     width: 96%;
+<<<<<<< HEAD
     padding: 0 8px 20px; } }
+=======
+    padding: 0 8px 20px; }
+  .header__search-form {
+    position: relative;
+    top: 60px;
+    right: -40px;
+    z-index: 2; } }
+>>>>>>> c0ec45a71ffa7938cfb3edf3f0b673b9026c61b9
