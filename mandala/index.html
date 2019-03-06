@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.7.5/dat.gui.js"></script>
+  <title>Document</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+    canvas {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="canvas"></canvas>
+ 
+  <script>
+    const canvas = document.getElementById('canvas');
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    const ctx = canvas.getContext('2d');
+    //
+    var centerX = canvas.width/2;
+    var centerY = canvas.height/2;
+    var settings = {
+      period: 14,
+      amp: 30
+    }
+    //
+    function drawCircle(radius, color, offset) {
+      ctx.fillStyle = color;
+      ctx.beginPath();
+      for (let i = 0; i < 300; i++) {
+        var angle = i * 2 * Math.PI / 300;
+        var dynamicRad = radius + settings.amp * Math.sin(angle*settings.period + offset);
+        var x = centerX + dynamicRad*Math.cos(angle);
+        var y = centerY + dynamicRad*Math.sin(angle);
+        if(i===0) ctx.moveTo(x,y)
+        else {
+          ctx.lineTo(x,y)
+        }
+      }
+      ctx.closePath();
+      ctx.strokeStyle = '#000'
+      ctx.stroke();
+      ctx.fill();
+    }
+    //
+    var time = 0;
+    function draw() {
+      time++;
+      ctx.fillStyle = '#10202f';
+      ctx.fillRect(0,0,canvas.width,canvas.height);
+      for (let i = 0; i < 26; i++) {
+        var color = 'black';
+        drawCircle(
+          300-i*10,
+          `hsl(${100+i*10}, 50%, ${80-i*1.5}%)`,
+          // color,
+          i*time/100
+        );
+      }
+    }
+    //
+    function render() {
+      draw();
+      window.requestAnimationFrame(render);
+    }
+    render();
+    //Dat.gui
+    var gui = new dat.GUI();
+    gui.add(settings, 'amp', 4, 40);
+  </script>
+</body>
+</html>
