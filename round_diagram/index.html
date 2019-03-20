@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Diagram</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.7.5/dat.gui.js"></script>
+  <script src="diagram.js"></script>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+    canvas {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="canvas"></canvas>
+  <script>
+    const canvas = document.getElementById('canvas');
+    const diagram = new Diagram(canvas,60, 2, 50, 2, 140);
+    diagram.render();
+
+    var gui = new dat.GUI();
+    gui.add(diagram, 'gap', 2, 6).step(1);
+    gui.add(diagram, 'rad', 50, 300).step(1);
+    gui.add(diagram, 'cellWidth', 20, 100).step(1);
+    gui.add(diagram, 'cellHeight', 2, 20).step(1);
+    gui.add(diagram, 'cells', 10, 200).step(1);
+    gui.add(diagram, 'shiftDefault', -6, 6).step(0.1);
+  </script>
+</body>
+</html>
